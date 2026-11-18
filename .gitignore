@@ -1,7 +1,0 @@
-*.csv
-*.dump
-*.backup
-.env
-.env.*
-__pycache__/
-.DS_Store
