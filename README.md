@@ -1,6 +1,6 @@
 # SokoMart Kenya — Advanced SQL
 
-**Jack Nimrod Kisutsa | LuxDevHQ Cohort 9**
+**Jack Kisutsa | LuxDevHQ Cohort 9**
 
 SQL analysis of SokoMart Kenya’s customers, sales, products and payments, covering 10 practice drills and 25 questions using PostgreSQL and DBeaver.
 
