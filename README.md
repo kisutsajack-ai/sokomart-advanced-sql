@@ -28,3 +28,15 @@ SQL analysis of SokoMart Kenya’s customers, sales, products and payments, cove
 **Fresh results:** Sections D and E change data. Use the course’s `07_reset_database.sql`, reload with **03 → 04/04b → 05**, and validate again when repeating the exercises. Capture Q25’s original-data result before Section D, or after a fresh reload. Q20 creates an order dated today.
 
 Screenshot folders are ready for your images. Source CSVs, database dumps and credentials are excluded from this repository.
+
+## Business insights and recommendations
+
+1. **Target the high-spending 2025 cohort (Q1).** Of 4,358 customers with completed purchases in 2025, **1,432** spent above the mean of **KES 118,774.54**. Use that cohort for the loyalty launch, then measure response and repeat purchases rather than inviting every customer indiscriminately.
+2. **Plan around the observed year-end peak (Q8).** December 2025 revenue was **KES 72,805,462.45**, the highest month in this dataset and **9.61% above November**. Prepare stock and fulfilment capacity ahead of the year-end period; one observed year is evidence for planning, not proof of a permanent seasonal pattern.
+3. **Protect profitable categories (Q14).** Electronics generated **KES 43,556,264.79** gross profit at **13.37%** margin; Fashion generated **KES 24,378,347.62** at **44.50%** margin. Both exceeded the average category profit of **KES 18,572,448.91**. Protect Electronics volume while testing Fashion bundles that preserve margin.
+4. **Investigate payment failures by both volume and rate (Q13).** M-Pesa recorded **1,373 failed payments** with **KES 30,210,227.30** in failed amounts, and an **89.33%** success rate. Its payment volume makes it a useful first investigation target. Failed amounts represent attempted payments, not proven lost revenue; check retries and eventual settlement before valuing recoveries.
+5. **Review slow-moving inventory (Q5).** **18 products** never appeared on any order, including non-completed orders. Review age, visibility, availability and category relevance before deciding on promotion or discontinuation.
+6. **Stop settlement duplication at ingestion (Q24).** **200 payment IDs** had repeated copies, producing **240 extra rows**. Deduplication reduced staging from **2,640 to 2,400 rows**, and reconciled to **KES 60,184,108.05** in the matching payment records. Retain the earliest copy and enforce unique payment IDs after validation.
+7. **Pilot retention offers with established repeat buyers (Q25).** **1,459 customers** bought in at least three consecutive months; the longest run was **22 months**. Use the qualifying cohort for a subscription or repeat-order pilot, and compare retention and incremental profit against a suitable control group.
+
+**First priority:** investigate M-Pesa’s failed-payment journey because it combines high transaction volume with KES 30.21 million in failed attempts. Start by reconciling failed attempts to retries and successful payments, then address the largest verified failure causes. This creates a measurable operational improvement without assuming every failed attempt was a lost sale.
