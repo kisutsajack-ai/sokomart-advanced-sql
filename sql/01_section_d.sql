@@ -65,6 +65,7 @@ SELECT sokomart.fn_customer_spend(4000,'2025-01-01','2025-12-31') AS spend_2025,
 SELECT customer_id,lifetime_spent,sokomart.fn_customer_spend(customer_id,'2025-01-01','2026-10-31') AS fn_value,
  lifetime_spent=sokomart.fn_customer_spend(customer_id,'2025-01-01','2026-10-31') AS matches
 FROM sokomart.v_customer_purchase_summary WHERE customer_id=4000;
+
 SELECT customer_id,first_name||' '||last_name AS full_name,
  sokomart.fn_customer_spend(customer_id,'2025-12-01','2025-12-31') AS december_2025_spend
 FROM sokomart.customers WHERE county='Nairobi' ORDER BY december_2025_spend DESC,customer_id LIMIT 5;
