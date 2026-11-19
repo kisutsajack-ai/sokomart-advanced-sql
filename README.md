@@ -27,7 +27,7 @@ SQL analysis of SokoMart Kenya’s customers, sales, products and payments, cove
 
 **Fresh results:** Sections D and E change data. Use the course’s `07_reset_database.sql`, reload with **03 → 04/04b → 05**, and validate again when repeating the exercises. Capture Q25’s original-data result before Section D, or after a fresh reload. Q20 creates an order dated today.
 
-Screenshot folders are ready for your images. Source CSVs, database dumps and credentials are excluded from this repository.
+Screenshot folders are ready for viewing. Source CSVs, database dumps and credentials are excluded from this repository.
 
 ## Business insights and recommendations
 
